@@ -1,0 +1,9 @@
+*.pyc
+.pydevproject
+.project
+.*.swp
+.idea*
+.DS_Store
+build
+dist
+**/*.egg-info
