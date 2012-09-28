@@ -8,10 +8,10 @@ setup(
     author_email = "matthew@rethought-solutions.com",
     url = "git://github.com/Rethought/activecache.git",
 
-    packages = find_packages('src'),
     package_dir = {'':'src'},
+    py_modules = ['activecache'],
     license = "BSD",
-    keywords = "django, tagging, tagman",
+    keywords = "cache",
     description = "Active in-memory cache object for Python.",
     classifiers = [
         "Intended Audience :: Developers",

@@ -1,8 +1,7 @@
 import threading
 import time
-import unittest
 from unittest import TestCase
-from cache import TriggeredCache
+from activecache import TriggeredCache
 
 
 class TestingCache(TriggeredCache):
