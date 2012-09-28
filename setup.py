@@ -5,7 +5,7 @@ setup(
     name = "activecache",
     version = "0.1.2",
     author = "ReThought Ltd",
-    author_email = "matthew@rethought-solutions.com",
+    author_email = "code@rethought-solutions.com",
     url = "git://github.com/Rethought/activecache.git",
 
     package_dir = {'':'src'},
