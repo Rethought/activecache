@@ -4,6 +4,7 @@ import unittest
 from unittest import TestCase
 from cache import TriggeredCache
 
+
 class TestingCache(TriggeredCache):
     def __init__(self):
         super(TestingCache, self).__init__()
@@ -40,15 +41,18 @@ class TestActiveCache(TestCase):
 
     def test_multiple_listeners_waiting_for_value(self):
         responses = []
+
         def listener():
             responses.append(self.cache.value)
 
         # start 20 threads all latching onto the cache. ensure each returns
-        # the answer 1 only (ie the cache correctly blocked and refreshed only once on start)
+        # the answer 1 only (ie the cache correctly blocked and refreshed only
+        # once on start)
         threads = [threading.Thread(target=listener) for x in xrange(20)]
         [t.start() for t in threads]
         time.sleep(1.2)
-        self.assertEquals(responses, [1]*20)
+        self.assertEquals(responses, [1] * 20)
+
 
 class TestMultipleCache(TestCase):
     """ Ensure that the caches are independent """
@@ -63,7 +67,3 @@ class TestMultipleCache(TestCase):
         time.sleep(1.2)
         self.assertEquals(self.cache_a.value, 1)
         self.assertEquals(self.cache_b.value, 2)
-
-
-if __name__=='__main__':
-    unittest.main()
