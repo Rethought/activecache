@@ -23,7 +23,7 @@ class ActiveCache(object):
     bound to a name in the local namespace and then used, rather than
     referenced multiple times from the cahce in one routine.
 
-    To make concrete, sub-clas and implement:
+    To make concrete, subclass and implement:
 
     * refresh_cache(self)
     * trigger(self)
