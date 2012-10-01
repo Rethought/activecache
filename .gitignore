@@ -7,3 +7,8 @@
 build
 dist
 **/*.egg-info
+.coverage
+coverage.xml
+htmlcov
+nosetests.xml
+pep8.txt
