@@ -6,7 +6,7 @@ setup(
     version = "0.1.2",
     author = "ReThought Ltd",
     author_email = "code@rethought-solutions.com",
-    url = "git://github.com/Rethought/activecache.git",
+    url = "git://github.com/Rethought/activecache",
 
     package_dir = {'':'src'},
     py_modules = ['activecache'],
